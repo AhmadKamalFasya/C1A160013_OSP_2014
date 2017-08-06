@@ -1,0 +1,65 @@
+uses crt;
+var
+a : integer;
+function iseng(x, y:integer):integer;
+begin
+     if (y <= 0) then
+     iseng := x
+else if (y mod 2 = 0) then
+     iseng := iseng(x-y, y-1)
+else
+    iseng := iseng(x+2* y, y-1);
+end;
+begin
+a := iseng(500,100);
+write(a);
+readkey;
+end.
+
+
+41.  Berapakah hasil yang di kembalikan fungsi tersebut pada pemanggilan iseng (500,100) ?
+Jawab :
+
+if (100 <= 0) false
+else if (100 mod 2 = 0) then true
+iseng := iseng(500-100, 100-1)
+masuk ke function iseng (400,99)
+if (99 <= 0) false
+else if ( 99 mod 2 = 0) false
+else iseng:= iseng(400+2*99, 99-1)
+masuk ke function iseng (598,98)
+if (98 <= 0) then true
+iseng := iseng(598-98, 98-1)
+masuk ke function iseng (500,97)
+if (97 <= 0) false
+else if (97 mod 2 = 0) false
+else iseng := iseng (500+2*97, 97-1)
+masuk ke function (694,96)
+if (96 <= 0) false
+else if (96 mod 2 = 0) true 
+iseng := iseng(694-96, 96-1)
+masuk ke function iseng (598,95)
+if (95 <= 0) false
+else if ( 95 mod 2 = 0) false
+else iseng:= iseng(598+2*95, 95-1)
+masuk ke function iseng (788,95)
+if (94 <= 0) false
+else if (94 mod 2 = 0) true 
+iseng := iseng(788-94, 94-1)
+masuk ke function iseng (694,93)
+if (93 <= 0) false
+else if ( 93 mod 2 = 0) false
+else iseng:= iseng(694+2*93, 93-1)
+masuk ke function iseng (880,92)
+if (92 <= 0) false
+else if (92 mod 2 = 0) true 
+iseng := iseng(880-92, 92-1)
+masuk ke function iseng (788,91)
+if (91 <= 0) false
+else if ( 91 mod 2 = 0) false
+else iseng:= iseng(788+2*91, 91-1)
+masuk ke function iseng (970,90)
+if (90 <= 0) false
+else if (90 mod 2 = 0) true 
+iseng := iseng(970-90, 90-1)
+program tersebut akan mengulang sampai ( x <= 0 ) dan akan menghasilkan output 2950
