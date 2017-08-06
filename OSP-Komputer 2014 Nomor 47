@@ -1,0 +1,48 @@
+var i,j: integer;
+var board: array[0..5] of longint;
+function kepo():integer;
+var n:integer = 0;
+begin
+for i := 5 downto 0 do 
+begin
+for i := n shl 1;
+n := n + (board[i] mod 2);
+end;
+kepo := n;
+end;
+procedure tambah();
+begin
+for i := 0 to 5 do
+board[i] := i;
+tambah();
+writeln(kepo)());
+end.
+
+
+47. Berapakah nilai board[1] pada akhir program ?
+Jawab :
+
+Untuk melihat hasilnya bisa di lihat di program nomor 46
+Yaitu : 
+board[1] = 2110
+di dapat dari
+
+board 1 = 1
+board 1 = 2
+board 1 = 6
+board 1 = 15
+board 1 = 31 
+board 1 = 56
+board 1 = 92
+board 1 = 141
+board 1 = 205 
+board 1 = 286
+board 1 = 386
+board 1 = 507
+board 1 = 651
+board 1 = 820
+board 1 = 1016
+board 1 = 1241
+board 1 = 1497
+board 1 = 1786
+board 1 = 2110
