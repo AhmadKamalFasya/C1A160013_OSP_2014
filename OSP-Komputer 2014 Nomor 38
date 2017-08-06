@@ -1,0 +1,87 @@
+uses crt;
+var x:integer;
+function lala(lili:integer):integer;
+var abc,i:integer;
+begin
+     abc:=0;
+     if (lili mod 5 = 0) then
+begin
+     for i:=1 to 7 do abc:=abc+lala(lili div 5);
+    end else if (lili mod 3 = 0) then
+begin
+     for i:=1 to 5 do abc:=abc+lala(lili div 3);
+     end else if (lili mod 2 = 0) then
+begin
+     abc:=lala(lili div 2)+lala(lili div 2);
+     end;
+     if (lili=1) then lala:=1 else
+      lala:=abc;
+      end;
+begin
+     x:=35;
+writeln(lala(x));
+readkey;
+end.
+
+38. Apabila x bernilai 35 apa output yang akan di hasilkan ?
+Jawab :
+
+function lala(35)
+begin
+x := 35;
+writeln(lala(x))
+end.
+begin
+abc := 0
+if (35 mod 5 = 0) then
+begin
+for i := 1 to 7 do
+abc := abc + lala (7 div 5);
+masuk ke function lala(7)
+begin
+abc := 0;
+if (7 mod 5 = 0) then (false)
+begin
+for i := 1 to 5 do
+abc := abc + lala(lili div 3);
+end else if (lili mod 2 = 0) then (false)
+begin
+abc := lala(lili div 2) + lala(lili div 2); (false)
+end;
+if (lili=1) then lala:= 1 (false)
+else
+lala := abc (true)
+lala := 0;
+program di atas akan mengulang sebanyak 7x dan akan menghasilkan nilai 0
+
+lalu kembali function lala(35) dan melakukan penjumlahan 0 sebanyak 7 kali
+
+for i := 1 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 2 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 3 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 4 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 5 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 6 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+for i := 7 to 7 di
+abc := abc + lala(7)
+abc := 0 + 0 = 0 
+
+maka nilai dari  lala(35) = 0
