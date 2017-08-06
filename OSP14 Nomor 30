@@ -296,6 +296,7 @@ for i := 6 to 6
 ans := 70 + 56
 buttercup(6) = 126
 
+Maka hasil Buttercup(6) adalah : 126
 •	Blossom(4) = 6+4 = 10
 Bubble(4) = 10+10 = 20
 Buttercup(4) = 15+20 = 35
