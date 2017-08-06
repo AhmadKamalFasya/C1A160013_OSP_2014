@@ -1,0 +1,41 @@
+uses crt;
+var
+a : integer;
+function kandang(ayam, kambing:integer):integer;
+var rumput, sapi: integer;
+begin
+     rumput:=(kambing-ayam) div 3;
+     sapi:=rumput*2;
+if ayam > kambing then
+   kandang:= 0
+else if (kambing-ayam < 3) then
+     kandang:= 2*(kambing-ayam)
+else kandang:= kandang(ayam,ayam+rumput)+
+               kandang(ayam+rumput,ayam+sapi)+
+               kandang(ayam+sapi,kambing);
+end;
+begin
+a := kandang(2,6);
+write(a);
+readkey;
+end.
+
+
+31.Berapakah nilai dari kandang(2,6)?
+Jawab : 
+a := kandang(2,6);
+ayam = 2
+kambing = 6
+rumput = 1
+sapi = 2
+
+if (2>6) tidak
+kandang(2,3)+kandang(3,4)+kandang(4,6)
+else if (3-2 < 3)
+	kandang:= 2*(3-2) = 2
+else if (4-3< 3)
+	kandang:= 2*(4-3) = 2
+else if (6-4< 3)
+  kandang:= 2*(6-4) = 4
+Jadi nilai dari kandang(2,6) ?
+ adalah (2+2+ 4)= 8
